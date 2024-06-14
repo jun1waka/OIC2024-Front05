@@ -1,12 +1,14 @@
 // カレンダー生成ボタンのクリックイベントを追加
 document.getElementById('generate-button').addEventListener('click', function() {
+
     // ユーザーが入力した年と月を取得するコードをここに書きます
-    // const year = ここに年の入力を取得するコード;
-    // const month = ここに月の入力を取得するコード;
+    const year = parseInt(document.getElementById('year-input').value);
+    const month = parseInt(document.getElementById('month-input').value) - 1; // 月は0から始まるため、1を引く
 
     // カレンダーを生成する関数を呼び出します
-    // generateCalendar(year, month);
+     generateCalendar(year, month);
 });
+
 
 /**
  * カレンダーを生成して表示する関数
